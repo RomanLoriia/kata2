@@ -1,11 +1,11 @@
 package jm.task.core.jdbc.model;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Table
+@Entity
 public class User {
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Id
     private Long id;
 
@@ -69,4 +69,5 @@ public class User {
                 ", age=" + age +
                 '}';
     }
+
 }
